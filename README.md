@@ -1,3 +1,9 @@
+# Instalacja
+
+W jednym z zadań będziemy używać Selenium.
+
+Selenium wymaga zainstalowania sterownika dla zaintalowanej przeglądarki. Proszę skorzytać z listy i instrukcji na tej stronie: https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
+
 # Jak uruchomić testy
 
 ## Przed uruchomieniem
