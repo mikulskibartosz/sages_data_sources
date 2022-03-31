@@ -4,9 +4,7 @@ W jednym z zadań będziemy używać Selenium.
 
 Selenium wymaga zainstalowania sterownika dla zaintalowanej przeglądarki. Proszę skorzytać z listy i instrukcji na tej stronie: https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 
-# Jak uruchomić testy
-
-## Przed uruchomieniem
+## Python
 
 Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała.
 
@@ -29,7 +27,14 @@ source ven/bin/activate
 pip3 install -r requirements.txt
 ```
 
-## Uruchamianie testów
+## Sprawdzenie czy wszystko działa
+
+```bash
+pytest -vv tests/test_intro.py
+pytest -vv -k test_check_if_driver_works
+```
+
+# Uruchamianie testów
 
 ```bash
 pytest

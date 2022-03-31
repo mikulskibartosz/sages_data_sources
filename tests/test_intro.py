@@ -1,5 +1,10 @@
+# wszystkie importy używane w czasie zadań
 import pytest
-
+import pandas as pd
+import requests
+from selenium import webdriver
+from selenium.webdriver.common import by
+import sqlite3
 
 class TestIntro:
     @pytest.fixture(scope='class')
