@@ -13,6 +13,11 @@ def driver():
     driver.quit()
 
 
+def test_check_if_driver_works(driver):
+    """To jest test sprawdzający czy Selenium zostało poprawnie zainstalowane."""
+    driver.get(URL)
+    assert driver.current_url == URL
+
 def test_load_page_using_selenium(driver):
     """Wczytaj stronę której adres znajduje się w zmiennej URL przy użyciu biblioteki selenium.
     Użyj selenium do wczytania tytułu strony.
