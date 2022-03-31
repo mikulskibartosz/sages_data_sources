@@ -10,6 +10,7 @@ XlsxWriter = "*"
 lxml = "*"
 requests = "*"
 beautifulsoup4 = "*"
+selenium = "*"
 
 [dev-packages]
 pytest = "*"
