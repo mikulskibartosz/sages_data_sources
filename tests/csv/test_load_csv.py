@@ -69,7 +69,7 @@ class TestLoadCsv:
         Wczytaj plik csv z nagłówkami używając funkcji pd.read_csv.
         Nazwa zmiennej ze ścieżką do pliku: CSV_WITH_HEADERS
         """
-        df = pd.read_csv(CSV_WITH_HEADERS)
+        df = ...
 
         print(df)
         assert df.equals(
@@ -89,7 +89,7 @@ class TestLoadCsv:
 
         Nazwa zmiennej ze ścieżką do pliku: CSV_WITHOUT_HEADERS
         """
-        df = pd.read_csv(CSV_WITHOUT_HEADERS, names=['col1', 'col2', 'col3'])
+        df = ...
 
         print(df)
         assert df.equals(
@@ -107,7 +107,7 @@ class TestLoadCsv:
         Wczytaj plik zawierający nagłówki, ale zmień ich nazwy na col_A, col_B, col_C.
         Nazwa zmiennej ze ścieżką do pliku: CSV_WITH_HEADERS
         """
-        df = pd.read_csv(CSV_WITH_HEADERS, names=['col_A', 'col_B', 'col_C'], header=0)
+        df = ...
 
         print(df)
         assert df.equals(
@@ -125,7 +125,7 @@ class TestLoadCsv:
         Wczytaj plik zawierający nagłówki. Zmień typ kolumny col2 na string.
         Nazwa zmiennej ze ścieżką do pliku: CSV_WITH_HEADERS
         """
-        df = pd.read_csv(CSV_WITH_HEADERS, dtype={'col2': str})
+        df = ...
 
         print(df)
         assert df.equals(
@@ -152,7 +152,7 @@ class TestLoadCsv:
         ---
         W czasie wczytywania pliku zignoruj tekst znajdujący się przed danymi.
         """
-        df = pd.read_csv(CSV_WITH_TEXT, skiprows=3)
+        df = ...
 
         print(df)
         assert df.equals(
@@ -172,7 +172,7 @@ class TestLoadCsv:
         * pola oddzielone średnikami
         * przecinek jako separator dziesiętny
         """
-        df = pd.read_csv(POLISH_CSV, sep=';', decimal=',')
+        df = ...
 
         print(df)
         assert df.equals(

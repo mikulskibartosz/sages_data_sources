@@ -6,7 +6,7 @@ JSON_LINES = 'input_data/json/iris_lines.json'
 
 def test_read_json():
     """Wczytaj zawartość pliku JSON_ARRAY jako Pandas DataFrame"""
-    df = pd.read_json(JSON_ARRAY)
+    df = ...
 
     print(df)
     assert df.shape == (30, 5)
@@ -20,8 +20,7 @@ def test_read_json_change_column_names():
     petalLength -> petal_length
     petalWidth -> petal_width
     species -> species"""
-    df = pd.read_json(JSON_ARRAY)
-    df.rename(columns={'sepalLength': 'sepal_length', 'sepalWidth': 'sepal_width', 'petalLength': 'petal_length', 'petalWidth': 'petal_width'}, inplace=True)
+    df = ...
 
     print(df)
     assert df.shape == (30, 5)
@@ -29,7 +28,7 @@ def test_read_json_change_column_names():
 
 def test_read_json_lines():
     """Wczytaj zawartość pliku JSON_LINES jako Pandas DataFrame"""
-    df = pd.read_json(JSON_LINES, lines=True)
+    df = ...
 
     print(df)
     assert df.shape == (30, 5)

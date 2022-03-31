@@ -74,7 +74,7 @@ DATA_WITH_AUTHORS = """<?xml version="1.0"?>
 
 def test_read_xml():
     """Wczytaj zawartość zmiennej DATA jako Pandas DataFrame."""
-    df = pd.read_xml(DATA)
+    df = ...
 
     print(df)
     assert df.equals(
@@ -99,7 +99,7 @@ def test_read_authors_from_xml():
     """Wczytaj tylko autorów książek ze zmiennej DATA_WITH_AUTHORS jako Pandas DataFrame.
     Podpowiedź: użyj argumentu xpath.
     """
-    df = pd.read_xml(DATA_WITH_AUTHORS, xpath=".//book/author")
+    df = ...
 
     print(df)
     assert df.equals(
@@ -113,7 +113,7 @@ def test_read_authors_from_xml():
 
 def test_read_fantasy_books():
     """Zwróć tylko książki Fantasy ze zmiennej DATA"""
-    df = pd.read_xml(DATA, xpath=".//book[genre='Fantasy']")
+    df = ...
 
     print(df)
     assert df.equals(

@@ -8,9 +8,7 @@ def test_load_page_title():
     """Wczytaj stronę której adres znajduje się w zmiennej URL przy użyciu biblioteki requests.
     Użyj beautifulsoup do wczytania tytułu strony.
     """
-    response = requests.get(URL)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    title = soup.title.string
+    title = ...
     print(title)
     assert 'mikulskibartosz/sages_data_sources' in title
 
@@ -18,13 +16,7 @@ def test_load_table_as_dataframe():
     """Wczytaj stronę ze zmiennej URL.
     Na stronie znajduje się tabelka. Wczytaj ją jako dataframe.
     """
-    response = requests.get(URL)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    article = soup.find('article')
-    table = article.find('table')
-    table_html = table.prettify()
-    dfs = pd.read_html(table_html)
-    df = dfs[0]
+    df = ...
     print(df)
 
     assert df.equals(pd.DataFrame({
@@ -41,23 +33,7 @@ def test_load_multiple_pages():
     Podpowiedź:
     Użyj reset_index() aby numerowanie wierszy było spójne z oczekiwanym wynikiem.
     """
-    response = requests.get(URL)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    links = soup.find_all('a')
-    pages_to_download = [link for link in links if link.string in ['page1', 'page2']]
-
-    urls = ['https://github.com' + link.get('href') for link in pages_to_download]
-
-    dfs = []
-    for url in urls:
-        response = requests.get(url)
-        soup = BeautifulSoup(response.text, 'html.parser')
-        article = soup.find('article')
-        table = article.find('table')
-        table_html = table.prettify()
-        dfs.append(pd.read_html(table_html)[0])
-
-    df = pd.concat(dfs).reset_index(drop=True)
+    df = ...
     print(df)
 
     assert df.equals(pd.DataFrame({

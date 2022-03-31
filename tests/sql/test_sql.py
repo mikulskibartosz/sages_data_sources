@@ -52,7 +52,7 @@ class TestSql:
         """Wczytaj nazwiska pasażerów z tabeli passengers.
         Podpowiedź: użyj funkcji run_query
         """
-        df = run_query('SELECT Name FROM passengers')
+        df = run_query('...')
 
         print(df)
         assert df.columns.values == ['Name']
@@ -62,7 +62,7 @@ class TestSql:
 
     def test_load_passengers_by_sex_and_age(self, load_titanic_data):
         """Wczytaj nazwisko kobiet mających powyżej 60 lat z listy pasażerów."""
-        df = run_query("SELECT Name FROM passengers WHERE Sex='female' and Age > 60")
+        df = run_query("...")
 
         print(df)
         assert df.columns.values == ['Name']
@@ -72,7 +72,7 @@ class TestSql:
     def test_sort_passengers_by_age(self, load_titanic_data):
         """Wczytaj nazwiska pasażerów. Posortuj wyniki wg wieku (rosnąco).
         Pomiń osoby, których wiek jest nieznany."""
-        df = run_query("SELECT Name FROM passengers WHERE Age is not null ORDER BY Age")
+        df = run_query("...")
 
         print(df)
         assert df.columns.values == ['Name']
@@ -82,7 +82,7 @@ class TestSql:
 
     def test_find_the_oldest_passenger(self, load_titanic_data):
         """Wczytaj nazwisko najstarszego pasażera. Zwróc tylko jedną wartość."""
-        df = run_query("SELECT Name FROM passengers WHERE Age is not null ORDER BY Age DESC LIMIT 1")
+        df = run_query("...")
 
         print(df)
         assert df.shape == (1, 1)
@@ -92,7 +92,7 @@ class TestSql:
 
     def test_find_survivors(self, load_titanic_data):
         """Wczytaj nazwiska osób które przeżyły zatonięcie Titanica."""
-        df = run_query("SELECT p.Name as Name FROM passengers p JOIN survivors s ON p.PassengerId = s.PassengerId WHERE s.Survived = 1")
+        df = run_query("...")
 
         print(df)
         assert df.columns.values == ['Name']
@@ -104,7 +104,7 @@ class TestSql:
         """Policz liczbę osób które rozpoczęły podróż w każdym z portów (kolumna embarked).
         Pomiń osoby z nieznanym portem.
         Zwróc dwie kolumny: embarked oraz number_of_passengers."""
-        df = run_query("SELECT Embarked as embarked, count(*) as number_of_passengers FROM passengers p JOIN tickets t ON p.PassengerId = t.PassengerId WHERE Embarked is not null GROUP BY Embarked")
+        df = run_query("...")
 
         print(df)
         assert df.shape == (3, 2)
@@ -117,7 +117,7 @@ class TestSql:
         Wynik powinien zawierać cztery kolumny: Sex, Survived, Oldest, Youngest
         """
         df = run_query("""
-        SELECT Sex, Survived, max(Age) as Oldest, min(Age) as Youngest FROM passengers p JOIN survivors s ON p.PassengerId = s.PassengerID WHERE Age is not null GROUP BY Sex, Survived
+        ...
         """)
 
         print(df)

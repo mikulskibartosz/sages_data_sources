@@ -23,13 +23,7 @@ def test_save_list_as_excel():
     Plik powinien zawierać zakładkę SHEET_1 oraz zakładkę SHEET_2.
     W obu zakładkach zapisujemy ten same DataFrame.
     """
-    df = pd.DataFrame(ROWS, columns=HEADERS)
-    writer = pd.ExcelWriter(EXCEL_TO_BE_SAVED, engine='xlsxwriter')
-    df.to_excel(writer, sheet_name=SHEET_1, index=False)
-    df.to_excel(writer, sheet_name=SHEET_2, index=False)
-    writer.save()
-
-    df = pd.read_excel(EXCEL_TO_BE_SAVED, sheet_name=SHEET_1)
+    df = ...
     print(df)
     assert df.equals(
         pd.DataFrame(

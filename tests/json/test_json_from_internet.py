@@ -12,7 +12,7 @@ def test_load_json_from_internet_using_pandas(expected_data):
     """Używająć Pandas, wczytaj plik JSON znajdujący się pod adresem wskazanym przez zmienną URL.
     Podpowiedź: zawartość tego pliku jest taka sama jak input_data/json/iris_lines.json
     """
-    df = pd.read_json(URL, lines=True)
+    df = ...
     print(df)
 
     assert df.equals(expected_data)
@@ -20,8 +20,7 @@ def test_load_json_from_internet_using_pandas(expected_data):
 def test_load_json_using_requests(expected_data):
     """Używając biblioteki requests, wczytaj plik JSON znajdujący się pod adresem wskazanym przez zmienną URL.
     Podpowiedź: zawartość tego pliku jest taka sama jak input_data/json/iris_lines.json"""
-    response = requests.get(URL)
-    df = pd.read_json(response.text, lines=True)
+    df = ...
     print(df)
 
     assert df.equals(expected_data)

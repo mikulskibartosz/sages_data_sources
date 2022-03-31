@@ -17,10 +17,7 @@ def test_save_list_as_csv():
     Zapisz listę ROWS w pliku CSV (użyj zmiennej CSV_TO_BE_SAVED).
     Użyj nagłówków z listy HEADERS.
     """
-    df = pd.DataFrame(ROWS)
-    df.to_csv(CSV_TO_BE_SAVED, index=False, header=HEADERS)
-
-    df = pd.read_csv(CSV_TO_BE_SAVED)
+    df = ...
     print(df)
     assert df.equals(
         pd.DataFrame(

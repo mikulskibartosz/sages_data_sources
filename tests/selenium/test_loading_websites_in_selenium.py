@@ -26,8 +26,7 @@ def test_load_page_using_selenium(driver):
     Podpowiedź: webdriver.Safari() jest wbudowany w selenium i nie wymaga dodatkowej instalacji.
     Ale trzeba mieć zainstalowane Safari w systemie.
     """
-    driver.get(URL)
-    title = driver.title
+    title = ...
     print(title)
     assert 'mikulskibartosz/sages_data_sources' in title
 
@@ -36,9 +35,7 @@ def test_load_table_header_using_selenium(driver):
     """Wczytaj stronę której adres znajduje się w zmiennej URL przy użyciu biblioteki selenium.
     Wczytaj nagłówki tabeli znajdujacej się na stronie (tej samej której używaliśmy w testach beautifulsoup)
     """
-    driver.get(URL)
-    headers = driver.find_elements(by=by.By.XPATH, value='//article/table/thead/tr/th')
-    header_titles = [header.text for header in headers]
+    header_titles = ...
 
     print(header_titles)
     assert header_titles == ['kolumna_A', 'kolumna_B', 'kolumna_C']
@@ -48,12 +45,7 @@ def test_load_table_as_dataframe_using_selenium(driver):
     """Wczytaj stronę której adres znajduje się w zmiennej URL przy użyciu biblioteki selenium.
     Wczytaj tabelę znajdujacą się na stronie jako Pandas DataFrame (tej samej której używaliśmy w testach beautifulsoup)
     """
-    driver.get(URL)
-    table = driver.find_elements(by=by.By.XPATH, value='//article/table')
-    html = table[0].get_attribute('innerHTML')
-    html = f'<table>{html}</table>'
-
-    df = pd.read_html(html)[0]
+    df = ...
 
     print(df)
     assert df.equals(pd.DataFrame({
@@ -66,12 +58,6 @@ def test_load_table_as_dataframe_using_selenium(driver):
 def test_follow_links_in_selenium(driver):
     """Wczytaj stronę której adres znajduje się w zmiennej URL przy użyciu biblioteki selenium.
     Przejdź do strony page1 i wczytaj jej tytuł"""
-    driver.get(URL)
-    print(driver.title)
-    print(driver.find_element(by=by.By.LINK_TEXT, value='page1').get_attribute('href'))
-    driver.find_element(by=by.By.LINK_TEXT, value='page1').click()
-    time.sleep(2)
-
-    title = driver.title
+    title = ...
     print(title)
     assert 'page1' in title

@@ -31,7 +31,7 @@ def test_sort_values_by_column():
     Podpowiedź:
     Po posortowaniu index będzie w odwrotnej kolejności. Najlepiej go usunąć.
     """
-    df = DATA.sort_values(by='col1').reset_index(drop=True)
+    df = ...
     print(df)
 
     assert df.equals(
@@ -48,9 +48,7 @@ def test_sort_by_multiple_columns():
     """
     Posortuj DataFrame EMPLOYEES wg kolumn last_name w kolejności odwrotnej i first_name w kolejności alfabetycznej.
     """
-    df = EMPLOYEES \
-        .sort_values(by=['last_name', 'first_name'], ascending=[False, True]) \
-        .reset_index(drop=True)
+    df = ...
     print(df)
 
     assert df.equals(
@@ -62,21 +60,21 @@ def test_sort_by_multiple_columns():
 
 def test_create_index():
     """Użyj kolumny col1 jako index DataFrame DATA."""
-    df = DATA.set_index('col1')
+    df = ...
     print(df)
 
     assert df.index.equals(pd.Index([3, 2, 1]))
 
 def test_create_text_index():
     """Użyj kolumny tekstowej col2 jako index DataFrame DATA."""
-    df = DATA.set_index('col2')
+    df = ...
     print(df)
 
     assert df.index.equals(pd.Index(['Trzeci', 'Drugi', 'Pierwszy']))
 
 def test_create_multiindex():
     """Użyj kolumn year, month aby stworzyć index DataFrame SALES"""
-    df = SALES.set_index(['year', 'month'])
+    df = ...
     print(df)
 
     expected_index = pd.MultiIndex.from_tuples([(2012, 1), (2014, 4), (2013, 7), (2014, 10)], names=['year', 'month'])
@@ -89,7 +87,7 @@ def test_group_by_and_sum():
     Podpowiedź:
     Usuń kolumnę month z wyniku.
     """
-    df = SALES.groupby('year').sum().drop('month', axis=1)
+    df = ...
     print(df)
 
     expected_df = pd.DataFrame({'sale': [55, 84, 71]}, index=[2012, 2013, 2014])
@@ -100,7 +98,7 @@ def test_group_by_and_mean():
     """
     Stwórz DataFrame zawierający średnią sprzedaż wg roku z danych SALES_LONG.
     """
-    df = SALES_LONG.groupby('year').mean()
+    df = ...
     print(df)
 
     expected_df = pd.DataFrame({'sale': [45.0, 55.0, 57.5, 42.0, 40.0, 57.5]}, index=[2012, 2013, 2014, 2015, 2018, 2021])
@@ -111,7 +109,7 @@ def test_group_by_and_agg():
     """
     Oblicz sumę i średnią sprzedaży wg roku z danych SALES_LONG używając tylko jednej operacji grupowania.
     """
-    df = SALES_LONG.groupby('year').agg(['sum', 'mean'])
+    df = ...
     print(df)
 
     expected_df = pd.DataFrame({

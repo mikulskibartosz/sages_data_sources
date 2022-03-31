@@ -60,7 +60,7 @@ class TestLoadExcel:
         """
         Wczytaj plik xlsx EXCEL_WITH_HEADER.
         """
-        df = pd.read_excel(EXCEL_WITH_HEADER)
+        df = ...
 
         print(df)
         assert df.equals(
@@ -78,7 +78,7 @@ class TestLoadExcel:
         Wczytaj zakładkę z nazwą znajdującą się w zmiennej SHEET_TO_BE_LOADED
         z pliku xlsx EXCEL_WITH_SHEET.
         """
-        df = pd.read_excel(EXCEL_WITH_SHEET, sheet_name=SHEET_TO_BE_LOADED)
+        df = ...
 
         print(df)
         assert df.equals(
@@ -97,7 +97,7 @@ class TestLoadExcel:
         Kolumna col2 powinna zawierać tekst (typ str).
         Kolumna col3 powinna zawierać liczbę (typ int).
         """
-        df = pd.read_excel(EXCEL_WITH_TYPES, dtype={'col1': 'datetime64[ns]'})
+        df = ...
 
         print(df.col1.dtype)
         assert df.col1.dtype == 'datetime64[ns]'
