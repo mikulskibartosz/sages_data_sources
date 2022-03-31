@@ -7,6 +7,8 @@ pipenv install --dev
 pipenv shell
 ```
 
+Jeśli używasz MacOS i nie można zainstalować `numpy`: `export SYSTEM_VERSION_COMPAT=1` przed `pipenv install --dev`
+
 ## Uruchamianie testów
 
 ```bash
