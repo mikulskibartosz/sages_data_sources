@@ -9,6 +9,7 @@ openpyxl = "*"
 XlsxWriter = "*"
 lxml = "*"
 requests = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 pytest = "*"
