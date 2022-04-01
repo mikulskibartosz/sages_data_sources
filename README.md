@@ -27,6 +27,7 @@ Jeśli używasz MacOS i nie można zainstalować `numpy`: `export SYSTEM_VERSION
 python3 -m venv ven
 source ven/bin/activate
 pip3 install -r requirements.txt
+pip3 install pytest
 ```
 
 ## Sprawdzenie czy wszystko działa
