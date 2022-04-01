@@ -4,6 +4,8 @@ W jednym z zadań będziemy używać Selenium.
 
 Selenium wymaga zainstalowania sterownika dla zaintalowanej przeglądarki. Proszę skorzytać z listy i instrukcji na tej stronie: https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 
+W pliku `test_loading_websites_in_selenium.py`, proszę zmienić linię: `driver = webdriver.Safari()` na odpowiednią dla używanej przez siebie przeglądarki.
+
 ## Python
 
 Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała.
