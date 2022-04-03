@@ -40,7 +40,7 @@ class TestLoadCsv:
         text_before_table = """To jest plik testowy.
 
         Zawierający trzy wiersze opisu."""
-        with open(CSV_WITH_TEXT, 'w') as f:
+        with open(CSV_WITH_TEXT, 'w', encoding='utf-8') as f:
             f.write(text_before_table)
             f.write('\n')
 
