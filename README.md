@@ -10,6 +10,8 @@ W pliku `test_loading_websites_in_selenium.py`, proszę zmienić linię: `driver
 
 Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała.
 
+Poniżej znajdują się instrukcje dla Pipenv oraz Python virtual env. Należy wybrać używany przez siebie manager pakietów (nie ma potrzeby konfigurowania obu).
+
 ### Pipenv
 
 Jeśli używasz Pipenv
