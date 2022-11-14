@@ -1,14 +1,33 @@
 from selenium import webdriver
 from selenium.webdriver.common import by
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromeDriverManager
+from webdriver_manager.opera import OperaDriverManager
 import pytest
 import time
 import pandas as pd
 
 URL = 'https://github.com/mikulskibartosz/sages_data_sources/tree/rozwiazania/input_data/markdown'
 
+def safari():
+    return webdriver.Safari()
+
+def firefox():
+    return webdriver.Firefox(executable_path=GeckoDriverManager().install())
+
+def chrome():
+    return webdriver.Chrome(executable_path=ChromeDriverManager().install())
+
+def edge():
+    return webdriver.Edge(executable_path=EdgeChromiumDriverManager().install())
+    
+def opera():
+    return webdriver.Opera(executable_path=OperaDriverManager().install())
+
 @pytest.fixture(scope='function')
 def driver():
-    driver = webdriver.Safari()
+    driver = safari()
     yield driver
     driver.quit()
 
