@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common import by
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.microsoft import EdgeChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.opera import OperaDriverManager
 import pytest
 import time
