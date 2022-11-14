@@ -65,7 +65,7 @@ Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała. W 
 
 ![Selenium driver](images/08_selenium.png)
 
-15. Po wybraniu odpowiedniej funkcji i zmianie linii 30, proszę uruchomić test `test_check_if_driver_works`.
+15. Po wybraniu odpowiedniej funkcji i zmianie linii 30, proszę uruchomić test `test_check_if_driver_works`. (Klikamy zielony trójkąt przy nazwie testu i wybieramy opcję "Run "Python test for tes..."".)
 
 ![Selenium test](images/09_selenium_run.png)
 
