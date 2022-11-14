@@ -55,11 +55,11 @@ Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała. W 
 
     W tym samym pliku znajdują się również funkcje: `safari`, `firefox`, `chrome`, `edge`, `opera`. Funkcje te są używane do wybrania odpowiedniego drivera selenium.
 
-14. W linii 30 pliku `test_loading_websites_in_selenium.py` znajduje się kod: `driver = safari()`. Proszę go zmodyfikować i użyć funkcji odpowiedniej dla przeglądarki dostępnej na Państwa komputerze:
+14. W linii 30 pliku `test_loading_websites_in_selenium.py` znajduje się kod: `driver = safari()`. Proszę go zmodyfikować i użyć funkcji odpowiedniej dla przeglądarki dostępnej na Państwa komputerze. Jeśli dostępne jest kilka przeglądarek, wybieramy jedną z nich.
 
 * w przypadku Firefox: `driver = firefox()`
 * w przypadku Chrome `driver = chrome()`
-* Edge: `driver = edge`
+* Edge: `driver = edge()`
 * Opera `driver = opera()`
 * Safari - pozostawiamy kod bez zmian
 
