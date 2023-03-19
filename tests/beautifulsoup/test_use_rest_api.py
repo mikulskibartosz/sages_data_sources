@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 
-USERS_URL = 'https://reqres.in/api/users?pages='
+USERS_URL = 'https://reqres.in/api/users?page='
 SINGLE_USER_URL = 'https://reqres.in/api/users/'
 LOGIN_URL = 'https://reqres.in/api/login'
 
@@ -25,18 +25,18 @@ def test_load_all_pages():
     print(df)
     assert df.shape == (12, 5)
     assert set(df['email'].values) == {
-        "george.bluth@reqres.in",
-        "janet.weaver@reqres.in",
-        "emma.wong@reqres.in",
-        "eve.holt@reqres.in",
-        "charles.morris@reqres.in",
-        "tracey.ramos@reqres.in",
-        "george.bluth@reqres.in",
-        "janet.weaver@reqres.in",
-        "emma.wong@reqres.in",
-        "eve.holt@reqres.in",
-        "charles.morris@reqres.in",
-        "tracey.ramos@reqres.in"
+        'byron.fields@reqres.in',
+        'charles.morris@reqres.in',
+        'emma.wong@reqres.in',
+        'eve.holt@reqres.in',
+        'george.bluth@reqres.in',
+        'george.edwards@reqres.in',
+        'janet.weaver@reqres.in',
+        'lindsay.ferguson@reqres.in',
+        'michael.lawson@reqres.in',
+        'rachel.howell@reqres.in',
+        'tobias.funke@reqres.in',
+        'tracey.ramos@reqres.in'
     }
 
 def test_load_single_page_and_handle_missing_data():
