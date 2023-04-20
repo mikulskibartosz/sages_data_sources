@@ -11,7 +11,9 @@ Używamy Python 3.9, ale prawdopodobnie każda wersja powyżej 3.7 zadziała. W 
 
 ## Przygotowanie środowiska
 
-1. Otwieramy "module settings".
+1. Otwieramy "module settings". 
+
+Dla osób używających PyCharm: instrukcja jak znaleźć opcję zmiany interpretera Pythona: https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html (nastepnie przechodzimy do punktu 3)
 
 ![Module settings](images/01_module_settings.png)
 
